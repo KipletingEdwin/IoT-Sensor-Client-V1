@@ -35,7 +35,7 @@ const PriorityQueue = ({ assets }) => {
         deployment.
       </p>
 
-      <div className="space-y-2 max-h-150 overflow-y-auto pr-1">
+      <div className="space-y-2 overflow-y-auto pr-1">
         {assets.length === 0 ? (
           <div className="text-center py-8 text-xs text-slate-600 font-mono border border-dashed border-slate-800 rounded-xl">
             Awaiting inbound socket streams...

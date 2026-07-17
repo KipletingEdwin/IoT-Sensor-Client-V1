@@ -2,7 +2,7 @@
 import { LayoutDashboard, RefreshCcw } from "lucide-react";
 import React from "react";
 
-const Header = ({ isConnected, onReset }) => {
+const Header = ({ isConnected }) => {
   return (
     <header className="mb-8 border-b border-slate-900 pb-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
       <div>
@@ -10,7 +10,7 @@ const Header = ({ isConnected, onReset }) => {
           <LayoutDashboard size={14} /> Heathrow Airport Holdings 
         </div>
         <h1 className="text-2xl font-black text-white tracking-tight mt-1">
-          Intelligent Predictive Maintenance (PdM) Control Center
+          IIoT
         </h1>
       </div>
 
@@ -23,17 +23,9 @@ const Header = ({ isConnected, onReset }) => {
             <span
               className={`w-2 h-2 rounded-full ${isConnected ? "bg-emerald-400 animate-pulse" : "bg-rose-500"}`}
             ></span>
-            {isConnected ? "LIVE_STREAM_ACTIVE" : "OFFLINE"}
+            {isConnected ? "CONNECTED" : "OFFLINE"}
           </span>
         </div>
-        <div className="w-px h-8 bg-slate-800"></div>
-        <button
-          onClick={onReset}
-          className="p-2 bg-slate-950 hover:bg-slate-800 text-slate-400 hover:text-white rounded-lg border border-slate-800 transition-all cursor-pointer"
-          title="Reset Local Registry View"
-        >
-          <RefreshCcw size={14} />
-        </button>
       </div>
     </header>
   );
